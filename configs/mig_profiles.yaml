@@ -1,0 +1,8 @@
+# Reference profile names — validate against `nvidia-smi mig -lgip` on your SKU
+profiles:
+  - name: 1g.10gb
+    description: "Smallest slice — strong isolation, lowest throughput per instance"
+  - name: 2g.20gb
+    description: "Mid slice"
+  - name: 3g.40gb
+    description: "Larger slice — higher throughput, fewer instances per GPU"

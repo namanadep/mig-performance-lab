@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mig-performance-lab"
+version = "0.1.0"
+description = "MIG profile documentation and nvidia-smi parsing for GPU partitioning labs"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pyyaml>=6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+torch = ["torch>=2.1"]
+
+[project.scripts]
+mig-lab = "mig_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,6 @@
+{
+  "gpus": [
+    {"index": 0, "name": "NVIDIA H200", "uuid": "GPU-illustrative-uuid-0"}
+  ],
+  "note": "Run mig-lab status on a MIG-capable node for real data"
+}
