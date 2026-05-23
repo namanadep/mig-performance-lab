@@ -6,7 +6,7 @@
 
 ## Why this exists
 
-**MIG** is how datacenters **slice** an A100/H100-class GPU for **multi-tenant** isolation. Hiring managers want evidence you understand **profiles**, **placement**, and **performance vs exclusivity**—not only single-tenant full-GPU jobs.
+**MIG** is how datacenters **slice** an A100/H100-class GPU for **multi-tenant** isolation.
 
 ---
 
