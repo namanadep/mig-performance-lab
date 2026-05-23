@@ -54,7 +54,6 @@ mig-lab describe-profiles
 | 1g.10gb | ~10 | High | 0.11× |
 | 3g.40gb | ~40 | Medium | 0.35× |
 
-Replace with **your** measured numbers; **never** copy spec-sheet **throughput** as measured.
 
 ---
 
