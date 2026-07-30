@@ -1,6 +1,6 @@
 # mig-performance-lab
 
-**One-line problem statement:** Compares **NVIDIA MIG** (Multi-Instance GPU) **profile** tradeoffs—**isolation**, **memory**, and **effective throughput**—using **structured configs** and **repeatable** `nvidia-smi` snapshots plus optional **PyTorch** micro-loads.
+**One-line problem statement:** Compares **NVIDIA MIG** (Multi-Instance GPU) **profile** tradeoffs in **isolation**, **memory**, and **effective throughput**, using **structured configs** and **repeatable** `nvidia-smi` snapshots plus optional **PyTorch** micro-loads.
 
 ---
 
@@ -25,9 +25,9 @@ flowchart TB
 
 ## Benchmark methodology
 
-1. **Capture topology** — `mig-lab status` dumps **GPU UUID**, **MIG devices**, **placement**.
-2. **Micro-load** — Optional FP32 GEMM on a **single MIG compute instance** (when CUDA visible device is set to that instance).
-3. **Compare** — Record **throughput** and **power** vs **full GPU** baseline on the same node.
+1. **Capture topology**: `mig-lab status` dumps **GPU UUID**, **MIG devices**, **placement**.
+2. **Micro-load**: Optional FP32 GEMM on a **single MIG compute instance** (when CUDA visible device is set to that instance).
+3. **Compare**: Record **throughput** and **power** vs **full GPU** baseline on the same node.
 
 **Caveats:** MIG **must** be enabled in **BIOS/driver**; profiles are **SKU-specific**.
 
@@ -59,15 +59,15 @@ mig-lab describe-profiles
 
 ## What I learned
 
-- **MIG is not free** — Throughput per instance tracks **SM partition** roughly, but **memory bandwidth** and **scheduling** add nuance.
-- **Ops complexity** — **Kubernetes** + MIG requires **device plugin** alignment; this lab helps **debug** wrong **profile** selection.
+- **MIG is not free**: Throughput per instance roughly tracks **SM partition**, but **memory bandwidth** and **scheduling** add nuance.
+- **Ops complexity**: **Kubernetes** + MIG requires **device plugin** alignment; this lab helps **debug** wrong **profile** selection.
 
 ---
 
 ## Production relevance
 
-- **Multi-tenant inference** clusters — **SLO per tenant** without **full GPU** per user.
-- **Chargeback** — **GPU slice** accounting.
+- **Multi-tenant inference** clusters: **SLO per tenant** without **full GPU** per user.
+- **Chargeback**: **GPU slice** accounting.
 
 ---
 
